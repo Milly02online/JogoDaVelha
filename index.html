@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jogo da velha</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Jogo da velha</h1>
+
+  <br><br><br><br><br>
+
+  <!-- grade do jogo -->
+  <div>
+    <!-- linha 1 -->
+    <div id="1" class="quad" onclick="escolher(this.id)">-</div>
+    <div id="2" class="quad" onclick="escolher(this.id)">-</div>
+    <div id="3" class="quad" onclick="escolher(this.id)">-</div>
+  </div>
+
+  <div>
+    <!-- linha 2 -->
+    <div id="4" class="quad" onclick="escolher(this.id)">-</div>
+    <div id="5" class="quad" onclick="escolher(this.id)">-</div>
+    <div id="6" class="quad" onclick="escolher(this.id)">-</div>
+  </div>
+
+  <div>
+    <!-- linha 3 -->
+    <div id="7" class="quad" onclick="escolher(this.id)">-</div>
+    <div id="8" class="quad" onclick="escolher(this.id)">-</div>
+    <div id="9" class="quad" onclick="escolher(this.id)">-</div>
+  </div>
+
+  <!-- informação do jogador atual -->
+  <div class="jogador">
+    <label>Jogador: </label>
+    <label id="jogadorSelecionado"></label>
+  </div>
+
+  <!-- vencedor do jogo -->
+  <div class="vencedor">
+    <label>Vencedor: </label>
+    <label id="vencedorSelecionado"></label>
+  </div>
+
+  <!-- botão de reiniciar o jogo -->
+  <div>
+    <button onclick="reiniciar()">Reiniciar</button>
+  </div>
+
+  <!-- cronometro -->
+  <form name="forma" class="form">
+    <div>
+      <span id="hora">00</span>:
+      <span id="min">00</span>:
+      <span id="seg">00</span>:
+      <span id="mili">000</span>
+    </div>
+    <br> <br>
+    <button type="button" name="começar" class="a">Começar</button>
+    <button type="button" name="pausar" class="a">Pausar</button>
+    <button type="button" name="resetar" class="a">Resetar</button>
+  </form>
+
+  <!-- simbolos -->
+  <div class="graf">
+    <h3>Símbolo jogador 1</h3>
+    <button class="graf1" id="1" onclick="botao1(this.id)">X</button>
+    <button class="graf2" id="2" onclick="botao1(this.id)">*</button>
+  </div>
+
+  <div class="graf3">
+    <h3>Símbolo jogador 2</h3>
+    <button class="graf4" id="3" onclick="botao2(this.id)">O</button>
+    <button class="graf5" id="4" onclick="botao2(this.id)">#</button>
+  </div>
+    
+
+    
+
+  </div>
+
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
